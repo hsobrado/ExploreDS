@@ -31,20 +31,6 @@ def getDescription(request):
     description = json.loads(description)
     return JsonResponse(description)
 
-def getInfo(request):
-    file = "hello_azure/Seconds per task (historical).csv"
-    df = pd.read_csv(file, header=1)
-    description = df.info().to_json()
-    description = json.loads(description)
-    return JsonResponse(description)
-
-def getShape(request):
-    file = "hello_azure/Seconds per task (historical).csv"
-    df = pd.read_csv(file, header=1)
-    description = df.shape().to_json()
-    description = json.loads(description)
-    return JsonResponse(description)
-
 def getHead(request):
     file = "hello_azure/Seconds per task (historical).csv"
     df = pd.read_csv(file, header=1)
