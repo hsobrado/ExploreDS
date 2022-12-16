@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import json
+import pandas as pd
 
 def index(request):
     print('Request for index page received')
@@ -20,3 +23,10 @@ def hello(request):
             return render(request, 'hello_azure/hello.html', context)
     else:
         return redirect('index')
+
+def getDescription(request):
+    file = "/Users/hsobrado/training/lasttry/explre/Seconds per task (historical).csv"
+    df = pd.read_csv(file, header=1)
+    description = df.describe().to_json()
+    description = json.loads(description)
+    return JsonResponse(description)
