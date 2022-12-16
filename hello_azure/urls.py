@@ -5,6 +5,6 @@ from hello_azure import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('hello', views.hello, name='hello'),
-    # path('description/', views.getDescription),
+    path('description/', views.getDescription),
 
 ]
