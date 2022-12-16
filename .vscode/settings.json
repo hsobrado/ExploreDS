@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f705d975-d7d8-4736-ad87-f6c892eb7e60/AppServices/subscriptions/f705d975-d7d8-4736-ad87-f6c892eb7e60/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ExploreDS2",
+    "appService.deploySubpath": "."
+}
