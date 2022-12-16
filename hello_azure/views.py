@@ -24,9 +24,9 @@ def hello(request):
     else:
         return redirect('index')
 
-def getDescription(request):
-    file = "/Users/hsobrado/training/lasttry/explre/Seconds per task (historical).csv"
-    df = pd.read_csv(file, header=1)
-    description = df.describe().to_json()
-    description = json.loads(description)
-    return JsonResponse(description)
+# def getDescription(request):
+#     file = "/Users/hsobrado/training/lasttry/explre/Seconds per task (historical).csv"
+#     df = pd.read_csv(file, header=1)
+#     description = df.describe().to_json()
+#     description = json.loads(description)
+#     return JsonResponse(description)
